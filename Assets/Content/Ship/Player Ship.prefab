@@ -269,7 +269,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   liftForce: 30
   maxSpeed: 10
-  antiGravityForce: 0.7
+  antiGravityForce: 1
   sideMovementForce: 5
   maxRotationAngle: 10
   rotateForce: 10

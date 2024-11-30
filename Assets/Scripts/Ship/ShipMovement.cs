@@ -33,9 +33,17 @@ public class ShipMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKey(KeyCode.W))
         {
             rb.AddForce(transform.up * liftForce, ForceMode2D.Force);
+        }
+        else if (Input.GetKey(KeyCode.S))
+        {
+            rb.AddForce(Vector2.up * 0.5f * (antiGravityForce * _gravityForce), ForceMode2D.Force);
+        }
+        else if (Input.GetKey(KeyCode.Space))
+        {
+            
         }
         else
         {
@@ -51,29 +59,12 @@ public class ShipMovement : MonoBehaviour
         }
         
         RotationLimiter();
-        //StabilizationForce();
         
         if (rb.velocity.magnitude > maxSpeed)
         {
             rb.velocity = rb.velocity.normalized * maxSpeed;
         }
     }
-
-    /*private void RotationLimiter()
-    {
-        float currentAngle = rb.rotation;
-        
-        if (currentAngle > maxRotationAngle)
-        {
-            float overAngle = currentAngle - maxRotationAngle;
-            rb.AddTorque(-overAngle * 0.5f, ForceMode2D.Force);
-        }
-        else if (currentAngle < -maxRotationAngle)
-        {
-            float overAngle = currentAngle + maxRotationAngle;
-            rb.AddTorque(-overAngle * 0.5f, ForceMode2D.Force);
-        }
-    }*/
     
     private void RotationLimiter()
     {
@@ -97,12 +88,4 @@ public class ShipMovement : MonoBehaviour
             rb.AddTorque(brakingForce + -stabilizingForce, ForceMode2D.Force);
         }
     }
-
-
-
-    /*private void StabilizationForce()
-    {
-        float currentAngle = rb.rotation;
-        rb.AddTorque(-currentAngle * stabilizationForce, ForceMode2D.Force);
-    }*/
 }
