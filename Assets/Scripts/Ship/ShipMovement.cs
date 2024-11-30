@@ -9,6 +9,7 @@ public class ShipMovement : MonoBehaviour
     [SerializeField] private float liftForce;
     [SerializeField] private float maxSpeed;
     [SerializeField] private float antiGravityForce;
+    [SerializeField] private float sideMovementForce;
     
     //rotation
         [SerializeField] private float maxRotationAngle;
@@ -46,6 +47,7 @@ public class ShipMovement : MonoBehaviour
         if (horizontalInput != 0)
         {
             rb.AddTorque(-horizontalInput * rotateForce, ForceMode2D.Force);
+            rb.AddForce(Vector2.right * horizontalInput * sideMovementForce, ForceMode2D.Force);
         }
         
         RotationLimiter();
@@ -57,7 +59,7 @@ public class ShipMovement : MonoBehaviour
         }
     }
 
-    private void RotationLimiter()
+    /*private void RotationLimiter()
     {
         float currentAngle = rb.rotation;
         
@@ -65,12 +67,34 @@ public class ShipMovement : MonoBehaviour
         {
             float overAngle = currentAngle - maxRotationAngle;
             rb.AddTorque(-overAngle * 0.5f, ForceMode2D.Force);
-            rb.AddTorque(overAngle * 0.4f, ForceMode2D.Force);
         }
         else if (currentAngle < -maxRotationAngle)
         {
             float overAngle = currentAngle + maxRotationAngle;
             rb.AddTorque(-overAngle * 0.5f, ForceMode2D.Force);
+        }
+    }*/
+    
+    private void RotationLimiter()
+    {
+        float currentAngle = rb.rotation;
+        float maxStrength = 2f;
+        float stabilizingMultiplier = 0.5f;
+        float brakingMultiplier = 0.8f;
+
+        if (currentAngle > maxRotationAngle)
+        {
+            float overAngle = currentAngle - maxRotationAngle;
+            float stabilizingForce = overAngle * stabilizingMultiplier;
+            float brakingForce = -Mathf.Sign(currentAngle) * maxStrength * brakingMultiplier;
+            rb.AddTorque(brakingForce + -stabilizingForce, ForceMode2D.Force);
+        }
+        else if (currentAngle < -maxRotationAngle)
+        {
+            float overAngle = currentAngle + maxRotationAngle;
+            float stabilizingForce = overAngle * stabilizingMultiplier;
+            float brakingForce = -Mathf.Sign(currentAngle) * maxStrength * brakingMultiplier;
+            rb.AddTorque(brakingForce + -stabilizingForce, ForceMode2D.Force);
         }
     }
 
