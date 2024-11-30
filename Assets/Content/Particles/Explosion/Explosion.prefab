@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3542378547055499202}
   - component: {fileID: 4873952818936778101}
   - component: {fileID: 79351485809780007}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Flash2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4908,7 +4908,7 @@ GameObject:
   - component: {fileID: 945500947210142943}
   - component: {fileID: 5169488153348867078}
   - component: {fileID: 8059491197320632018}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Explosion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9796,7 +9796,7 @@ GameObject:
   - component: {fileID: 2119028013397095688}
   - component: {fileID: 4562458972479451585}
   - component: {fileID: 7763983451050985306}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Explosion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14687,7 +14687,7 @@ GameObject:
   - component: {fileID: 9210869371530334221}
   - component: {fileID: 5883070665778815271}
   - component: {fileID: 2725726433725682224}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Flash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
