@@ -578,6 +578,7 @@ GameObject:
   - component: {fileID: 5783877175714503275}
   - component: {fileID: 6046813369100430565}
   - component: {fileID: 4308468300340688007}
+  - component: {fileID: 4323557272344687169}
   m_Layer: 0
   m_Name: Player Ship
   m_TagString: Player
@@ -692,6 +693,22 @@ MonoBehaviour:
   maxRotationAngle: 5
   rotateForce: 10
   stabilizationForce: 5
+--- !u!114 &4323557272344687169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2971317681012061124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b7a90e6be6f48742b0cff4c467d62bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _shipTurret: {fileID: 0}
+  _shipHull: {fileID: 0}
+  _shipSmallEngine: {fileID: 0}
+  _shipBigEngine: {fileID: 0}
 --- !u!1 &3002301671528349005
 GameObject:
   m_ObjectHideFlags: 0
