@@ -792,6 +792,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shipCannon: {fileID: 800685353789519463}
+  cannonSprite: {fileID: 8556532771909992779}
+  mountSprite: {fileID: 7647689308376612012}
+  searchlight: {fileID: 590154339217966189}
+  blowUpEffect: {fileID: 2313445125499747878, guid: 21232867563bedb409eb5740a54a529e, type: 3}
   MaxHealth: 4
   HitCooldown: 0.5
 --- !u!58 &2860607270308430173
