@@ -1,9 +1,14 @@
 using Interface;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class BasicTurret : MonoBehaviour, ITurret, IDamagable
 {
-    [Header("Turret Generator settings")]
+    [Header("Turrets")] 
+    [SerializeField] private GameObject _forceField;
+    [SerializeField] private Light2D _lightFiled;
+
+[Header("Turret settings")]
     [SerializeField] private int _MaxHealth = 10;
     
     private Rigidbody2D _rb;
@@ -49,6 +54,8 @@ public class BasicTurret : MonoBehaviour, ITurret, IDamagable
     public void PowerFieldOff()
     {
         _powerField = false;
+        Destroy(_forceField);
+        _lightFiled.intensity = 0;
     }
 
     public void TakeDamage(int damage)

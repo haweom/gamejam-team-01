@@ -25,7 +25,7 @@ public class Module : MonoBehaviour
         if (!collision.gameObject.CompareTag("Bullet")) return;
         if (_hitCooldownTimer > 0) return;
 
-        var bullet = collision.gameObject.GetComponent<BulletLaunch>();
+        var bullet = collision.gameObject.GetComponent<BulletLaunchShip>();
         Health -= bullet.Damage;
 
         _hitCooldownTimer = HitCooldown;
