@@ -1,9 +1,10 @@
 using Interface;
 using UnityEngine;
 
-public class CannonTracking : MonoBehaviour
+public class MountTrack : MonoBehaviour
 {
     private Transform _playerTrans;
+    public bool destoryed = false;
     //[SerializeField] private float angleFix = 60f;
     private void Awake()
     {
@@ -13,6 +14,7 @@ public class CannonTracking : MonoBehaviour
 
     private void Update()
     {
+        if (destoryed) return;
         RotateTowardsPlayer();
     }
 
