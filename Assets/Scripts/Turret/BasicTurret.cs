@@ -42,6 +42,7 @@ public class BasicTurret : MonoBehaviour, ITurret, IDamagable
         }
 
         _cannonShoot = _cannon.GetComponent<CannonShoot>();
+        _mountTrack = _mountTrans.gameObject.GetComponent<MountTrack>();
     }
 
     private void Start()
