@@ -271,8 +271,8 @@ MonoBehaviour:
   maxSpeed: 10
   antiGravityForce: 0.7
   sideMovementForce: 5
-  maxRotationAngle: 15
-  rotateForce: 5
+  maxRotationAngle: 10
+  rotateForce: 10
   stabilizationForce: 5
 --- !u!1 &3002301671528349005
 GameObject:
