@@ -52,7 +52,7 @@ MonoBehaviour:
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
-  m_ApplyToSortingLayers: e7d580fef74d0403738b6307000000003734b6918d986f279d549a77f5447869e3461570753ca59d
+  m_ApplyToSortingLayers: e7d580fef74d0403738b6307000000003734b6918d986f279d549a77f5447869
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -68,7 +68,7 @@ MonoBehaviour:
   m_LocalBounds:
     m_Center: {x: 0, y: -0.00000011920929, z: 0}
     m_Extent: {x: 0.9985302, y: 0.99853027, z: 0}
-  m_PointLightInnerAngle: 39.31
+  m_PointLightInnerAngle: 20.45
   m_PointLightOuterAngle: 108.65
   m_PointLightInnerRadius: 0
   m_PointLightOuterRadius: 19.244493
@@ -262,7 +262,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 4418447491631117820}
+  - {fileID: 6796505701077636903}
+  - {fileID: 1073389169141510913}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &5783877175714503275
@@ -353,7 +354,7 @@ MonoBehaviour:
   maxSpeed: 10
   antiGravityForce: 1
   sideMovementForce: 5
-  maxRotationAngle: 10
+  maxRotationAngle: 5
   rotateForce: 10
   stabilizationForce: 5
 --- !u!1 &3002301671528349005
@@ -366,6 +367,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1073389169141510913}
   - component: {fileID: 7647689308376612012}
+  - component: {fileID: 2731057385051477869}
+  - component: {fileID: 2860607270308430173}
   m_Layer: 7
   m_Name: Ship Turret
   m_TagString: Untagged
@@ -381,13 +384,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3002301671528349005}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.8540003, y: -0.8069999, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.854, y: -0.807, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5414204723349850780}
-  m_Father: {fileID: 4418447491631117820}
+  m_Father: {fileID: 8916053137392193574}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7647689308376612012
 SpriteRenderer:
@@ -441,6 +444,54 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2731057385051477869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3002301671528349005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5e1b39a95aaa0b4b91355941127fa55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxHealth: 4
+--- !u!58 &2860607270308430173
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3002301671528349005}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.45
 --- !u!1 &3363519162134382544
 GameObject:
   m_ObjectHideFlags: 0
@@ -529,12 +580,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4629071397329186406}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 4418447491631117820}
+  m_Father: {fileID: 8916053137392193574}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6100944938546439413
 SpriteRenderer:
@@ -670,53 +721,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 394a13f0dca45964fb5739cc50f09311, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxAngle: 95
+  rotationSpeed: 100
   minAngle: -95
---- !u!1 &8168114134334814039
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4418447491631117820}
-  - component: {fileID: 461047309398200483}
-  m_Layer: 0
-  m_Name: Wiggle
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4418447491631117820
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8168114134334814039}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 6796505701077636903}
-  - {fileID: 1073389169141510913}
-  m_Father: {fileID: 8916053137392193574}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &461047309398200483
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8168114134334814039}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fcb76c7d59f575c438af3955609e3e9f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  wiggleAmount: 0.2
-  wiggleSpeed: 2
+  maxAngle: 95
