@@ -32,12 +32,14 @@ public class CameraController : MonoBehaviour
             transform.position.z
         );
 
-        foreach (var shake in shakes)
+        shakes.RemoveAll(shake =>
         {
             var rotation = Random.Range(0, 2 * Mathf.PI);
 
             transform.position += shake.strength * new Vector3(Mathf.Cos(rotation), Mathf.Sin(rotation), 0);
             shake.strength *= shake.diminish;
-        }
+
+            return shake.strength < 0.001f;
+        });
     }
 }
