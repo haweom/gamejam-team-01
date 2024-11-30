@@ -75,7 +75,7 @@ public class BasicTurret : MonoBehaviour, ITurret, IDamagable
 
     public void Destruct()
     {
-        _mountTrack.destoryed = true;
+        _mountTrack.destroyed = true;
         _cannonShoot.isDestroyed = true;
         _cannonShoot.canShoot = false;
 

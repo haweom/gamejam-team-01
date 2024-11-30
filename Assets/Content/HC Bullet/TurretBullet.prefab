@@ -205,6 +205,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damage: 1
+  explosion: {fileID: 3022916965339811462, guid: e9c6fb61c3aa6824f8ab531b1368d4d9, type: 3}
 --- !u!1 &4085104374366196031
 GameObject:
   m_ObjectHideFlags: 0

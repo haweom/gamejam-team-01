@@ -5,27 +5,49 @@ using UnityEngine;
 public class MountTrack : MonoBehaviour
 {
     private Transform _playerTrans;
-    public bool destoryed = false;
+    public bool destroyed = false;
     //[SerializeField] private float angleFix = 60f;
     [SerializeField] private bool mode;
+    private float maxRange = 40f;
+    private CannonShoot _cannonShoot;
 
     private void Awake()
     {
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         _playerTrans = player.transform;
+
+        var cannonTransform = transform.Find("Cannon");
+        var cannon = cannonTransform.gameObject;
+        _cannonShoot = cannon.GetComponent<CannonShoot>();
     }
 
     private void Start()
     {
-        
+        _cannonShoot.canShoot = false;
     }
 
     private void Update()
     {
-        if (destoryed) return;
-        RotateTowardsPlayer();
+        if (destroyed || _playerTrans == null) return;
+        if (IsPlayerInRange())
+        {
+            if (!_cannonShoot.canShoot)
+            {
+                _cannonShoot.canShoot = true;
+            }
+            RotateTowardsPlayer();
+        }
+        else
+        {
+            _cannonShoot.canShoot = false;
+        }
     }
 
+    private bool IsPlayerInRange()
+    {
+        return Vector3.Distance(_playerTrans.position, transform.position) <= maxRange;
+    }
+    
     private void RotateTowardsPlayer()
     {
         Vector3 direction = _playerTrans.position - transform.position;
