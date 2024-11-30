@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,12 +11,18 @@ public class ShipCannon : MonoBehaviour
     
     private float _shootTimer;
     private Transform _shootPoint;
+    private Rigidbody2D _shipRb;
     
     private void Awake()
     {
         _shootPoint = transform.Find("ShootPoint");
     }
-    
+
+    private void Start()
+    {
+        _shipRb = GetComponentInParent<Rigidbody2D>();
+    }
+
     private void Update()
     {
         _shootTimer += Time.deltaTime;
@@ -34,7 +41,22 @@ public class ShipCannon : MonoBehaviour
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         if (rb != null)
         {
-            rb.AddForce(_shootPoint.up * shootForce, ForceMode2D.Impulse);
+            Vector2 shootDirection = _shootPoint.up.normalized;
+            float shipSpeed = Vector2.Dot(_shipRb.velocity, shootDirection);
+            
+            Vector2 additionalVelocity;
+            if (shipSpeed > 0)
+            {
+                additionalVelocity = shootDirection * shipSpeed;
+            }
+            else
+            {
+                additionalVelocity = Vector2.zero;
+            }
+            
+            Vector2 bulletVelocity = (shootDirection * shootForce) + additionalVelocity;
+            
+            rb.velocity = bulletVelocity;
         }
     }
 }
