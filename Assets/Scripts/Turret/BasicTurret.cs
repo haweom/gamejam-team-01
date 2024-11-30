@@ -13,6 +13,7 @@ public class BasicTurret : MonoBehaviour, ITurret, IDamagable
     
     private Rigidbody2D _rb;
     private GameObject _mount;
+    private MountTrack _mountTrack;
     private Transform _mountTrans;
     private GameObject _cannon;
     private CannonShoot _cannonShoot;
@@ -72,6 +73,7 @@ public class BasicTurret : MonoBehaviour, ITurret, IDamagable
 
     public void Destruct()
     {
+        _mountTrack.destoryed = true;
         _cannonShoot.isDestroyed = true;
         _cannonShoot.canShoot = false;
     }
