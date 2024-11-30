@@ -36,6 +36,11 @@ public class engineModule : MonoBehaviour, IDamagable
         }
     }
 
+    public void repairHealth()
+    {
+        Health = MaxHealth;
+    }
+
     //TODO add negative buffs
     
     private void damageEffect()
