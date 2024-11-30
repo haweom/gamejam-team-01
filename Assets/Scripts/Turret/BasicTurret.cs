@@ -8,7 +8,7 @@ public class BasicTurret : MonoBehaviour, ITurret, IDamagable
     [SerializeField] private GameObject _forceField;
     [SerializeField] private Light2D _lightFiled;
 
-[Header("Turret settings")]
+    [Header("Turret settings")]
     [SerializeField] private int _MaxHealth = 10;
     
     private Rigidbody2D _rb;
