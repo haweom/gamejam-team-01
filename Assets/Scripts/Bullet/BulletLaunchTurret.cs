@@ -5,6 +5,7 @@ using UnityEngine;
 public class BulletLaunchTurret : MonoBehaviour
 {
     public int Damage = 1;
+    [SerializeField] private GameObject explosion;
 
     private void Start()
     {
@@ -30,6 +31,7 @@ public class BulletLaunchTurret : MonoBehaviour
             if (damagable != null)
             {
                 damagable.TakeDamage(Damage);
+                Instantiate(explosion, transform.position, Quaternion.identity);
                 Destroy(gameObject);
             }
         }
