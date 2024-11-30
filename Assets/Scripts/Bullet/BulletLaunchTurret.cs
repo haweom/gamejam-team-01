@@ -23,6 +23,7 @@ public class BulletLaunchTurret : MonoBehaviour
         if (other.CompareTag("Ground") )
         {
             Destroy(gameObject);
+            Instantiate(explosion, transform.position, Quaternion.identity);
         }
         
         if (other.CompareTag("Player"))
