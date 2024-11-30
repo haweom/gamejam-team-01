@@ -12,9 +12,9 @@ public class ShipMovement : MonoBehaviour
     [SerializeField] private float sideMovementForce;
     
     //rotation
-        [SerializeField] private float maxRotationAngle;
-        [SerializeField] private float rotateForce;
-        [SerializeField] private float stabilizationForce;
+    [SerializeField] private float maxRotationAngle;
+    [SerializeField] private float rotateForce;
+    [SerializeField] private float stabilizationForce;
         
     private Rigidbody2D rb;
     private float _gravityForce;
@@ -69,6 +69,13 @@ public class ShipMovement : MonoBehaviour
     private void RotationLimiter()
     {
         float currentAngle = rb.rotation;
+        
+        
+        if (currentAngle <= maxRotationAngle && currentAngle >= -maxRotationAngle)
+        {
+            return;
+        }
+        
         float maxStrength = 2f;
         float stabilizingMultiplier = 0.5f;
         float brakingMultiplier = 0.8f;
