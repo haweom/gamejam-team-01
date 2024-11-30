@@ -38,11 +38,12 @@ public class TurretGenerator : MonoBehaviour, IDamagable
         _iturret3 = _turret3.GetComponent<ITurret>();
         _animatorTower1 = _tower1.GetComponent<Animator>();
         _animatorTower2 = _tower2.GetComponent<Animator>();
-
+        _currentHealth = 10;
     }
 
     public void TakeDamage(int damage)
     {
+        Debug.Log("Taking damage Generator");
         if (_currentHealth <= 0)
         {
             Destruct();
@@ -55,13 +56,14 @@ public class TurretGenerator : MonoBehaviour, IDamagable
 
     public void Destruct()
     {
-        _animatorTower1.SetTrigger("Destoryed");
-        _animatorTower2.SetTrigger("Destoryed");
+        gameObject.GetComponent<Collider2D>().enabled = false;
+        _animatorTower1.SetTrigger("Destroyed");
+        _animatorTower2.SetTrigger("Destroyed");
         _tower1Light.intensity = 0;
         _tower2Light.intensity = 0;
         
-        if(_turret1 != null) _iturret1.PowerFieldOff();
-        if(_turret2 != null) _iturret2.PowerFieldOff();
-        if(_turret3 != null) _iturret3.PowerFieldOff();
+        // if(_turret1 != null) _iturret1.PowerFieldOff();
+        // if(_turret2 != null) _iturret2.PowerFieldOff();
+        // if(_turret3 != null) _iturret3.PowerFieldOff();
     }
 }
