@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,7 +9,14 @@ public class MenuController : MonoBehaviour
 {
     public GameObject MainMenu;
     public GameObject ControllsMenu;
-    
+    public GameObject Credits;
+
+    private void Awake()
+    {
+        Credits.SetActive(false);
+        ControllsMenu.SetActive(false);
+    }
+
     public void MainMenuOnPlayButtonPressed()
     {
         Debug.Log("Load Game");
@@ -19,12 +27,12 @@ public class MenuController : MonoBehaviour
     {
         ControllsMenu.SetActive(true);
         MainMenu.SetActive(false);
-        Debug.Log("Controlls button pressed");
     }
 
     public void MainMenuOnCreditsButtonPressed()
     {
-        Debug.Log("cREDIST button pressed");
+        Credits.SetActive(true);
+        MainMenu.SetActive(false);
     }
     
     public void MainMenuOnExitButtonPressed()

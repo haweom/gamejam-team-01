@@ -7,6 +7,7 @@ namespace Menu
     {
         public GameObject MainMenu;
         public GameObject ControllsMenu;
+        public GameObject Credits;
         
         public void ControllMenuOnBackButtonPressed()
         {
