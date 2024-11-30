@@ -1,37 +1,40 @@
-using TMPro;
 using UnityEngine;
-using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
-public class UIModule : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+public class UIModule : MonoBehaviour
 {
     public GameObject Module;
     private Module _module;
 
-    public GameObject HoverText;
-    private TextMeshPro _text;
-
-    private bool _mouseOver = false;
+    private Image _image;
 
     void Awake()
     {
-        _text = HoverText.GetComponent<TextMeshPro>();
-        _module = HoverText.GetComponent<Module>();
+        _module = Module.GetComponent<Module>();
+        _image = GetComponent<Image>();
     }
 
     void Update()
     {
-        if (_mouseOver) _text.text = $"{100 * (float)_module.Health / _module.MaxHealth}%";
+        var ratio = (float)_module.Health / _module.MaxHealth;
+        _image.color = Color.Lerp(Color.green, Color.red, 1 - ratio);
     }
 
-    public void OnPointerExit(PointerEventData eventData)
-    {
-        _mouseOver = false;
-        _text.text = string.Empty;
-    }
+    /*    void Update()
+        {
+            if (_mouseOver) _text.text = $"{100 * (float)_module.Health / _module.MaxHealth}%";
+        }
 
-    public void OnPointerEnter(PointerEventData eventData)
-    {
-        Debug.Log("ehah");
-        _mouseOver = true;
-    }
+        public void OnPointerExit(PointerEventData eventData)
+        {
+            _mouseOver = false;
+            _text.text = string.Empty;
+        }
+
+        public void OnPointerEnter(PointerEventData eventData)
+        {
+            Debug.Log("ehah");
+            _mouseOver = true;
+        }
+    */
 }
