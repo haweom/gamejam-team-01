@@ -2,11 +2,12 @@ using UnityEngine;
 
 public class CannonTracking : MonoBehaviour
 {
-    private Camera _mainCamera;
+    private Transform _playerTrans;
 
     private void Awake()
     {
-        _mainCamera = Camera.main;
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        _playerTrans = player.transform;
     }
 
     private void Update()
@@ -16,12 +17,7 @@ public class CannonTracking : MonoBehaviour
 
     private void RotateTowardsCursor()
     {
-        if (_mainCamera == null) return;
-        
-        Vector3 mousePosition = _mainCamera.ScreenToWorldPoint(Input.mousePosition);
-        mousePosition.z = 0f;
-        
-        Vector3 direction = mousePosition - transform.position;
+        Vector3 direction = _playerTrans.position - transform.position;
         
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90f;
         
