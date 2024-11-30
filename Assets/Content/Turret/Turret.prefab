@@ -430,9 +430,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f334a8ade3fcf54ca694f0d7c656109, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 3688137133216289480, guid: e7d6fc5428e05a242b6edcd0965f4b12, type: 3}
+  bulletPrefab: {fileID: 127746530675501836, guid: b2fa02e111286244cb12b19a9812f793, type: 3}
   shootForce: 10
   shootInterval: 0.2
+  bulletCount: 4
+  isTurret: 1
   isDestroyed: 0
   canShoot: 0
 --- !u!1 &5078849114530245672
