@@ -319,7 +319,7 @@ MonoBehaviour:
   _tower1Light: {fileID: 2175807315294132952}
   _tower2: {fileID: 6839355955518476036}
   _tower2Light: {fileID: 6765510663336439538}
-  _MaxHealth: 10
+  _MaxHealth: 2
 --- !u!1 &6673657422164470286
 GameObject:
   m_ObjectHideFlags: 0

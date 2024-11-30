@@ -26,8 +26,12 @@ public class BulletLaunchTurret : MonoBehaviour
         
         if (other.CompareTag("Player"))
         {
-            other.GetComponent<IDamagable>().TakeDamage(Damage);
-            Destroy(gameObject);
+            IDamagable damagable = other.GetComponent<IDamagable>();
+            if (damagable != null)
+            {
+                damagable.TakeDamage(Damage);
+                Destroy(gameObject);
+            }
         }
     }
 }

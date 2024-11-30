@@ -151,7 +151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6ff196e079eec247bf539c079a08ffa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CameraLerp: 0.8
+  CameraLerp: 0.05
   Offset: {x: 7, y: 0}
 --- !u!1001 &935249174948101248
 PrefabInstance:
@@ -163,11 +163,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 444397671956951562, guid: 3717c8301997a684c9e3c600e8edde58, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.79
+      value: 3.29
       objectReference: {fileID: 0}
     - target: {fileID: 444397671956951562, guid: 3717c8301997a684c9e3c600e8edde58, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 17.54
+      value: 15.41
       objectReference: {fileID: 0}
     - target: {fileID: 444397671956951562, guid: 3717c8301997a684c9e3c600e8edde58, type: 3}
       propertyPath: m_LocalPosition.z

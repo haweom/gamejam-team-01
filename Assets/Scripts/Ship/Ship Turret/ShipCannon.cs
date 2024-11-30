@@ -14,6 +14,8 @@ public class ShipCannon : MonoBehaviour
     private Transform _shootPoint;
     private Rigidbody2D _shipRb;
     private CameraController _cameraController;
+    private bool _canShoot = true;
+
 
     private void Awake()
     {
@@ -30,7 +32,7 @@ public class ShipCannon : MonoBehaviour
     {
         _shootTimer += Time.deltaTime;
 
-        if (Input.GetMouseButton(0) && _shootTimer >= shootInterval)
+        if (Input.GetMouseButton(0) && _shootTimer >= shootInterval && _canShoot)
         {
             Shoot();
             _shootTimer = 0f;
@@ -59,5 +61,15 @@ public class ShipCannon : MonoBehaviour
 
         // FX
         Instantiate(particlesPrefab, _shootPoint.position, spreadRotation * _shootPoint.rotation);
+    }
+
+    public void SetShootTrue()
+    {
+        _canShoot = true;
+    }
+
+    public void SetShootFalse()
+    {
+        _canShoot = false;
     }
 }
