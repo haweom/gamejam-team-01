@@ -1,6 +1,7 @@
+using Interface;
 using UnityEngine;
 
-public class Module : MonoBehaviour
+public class Module : MonoBehaviour, IDamagable
 {
     public bool Destroyed => Health > 0;
 
@@ -20,14 +21,25 @@ public class Module : MonoBehaviour
         if (_hitCooldownTimer > 0) _hitCooldownTimer -= Time.deltaTime;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    /*    private void OnTriggerEnter2D(Collider2D collision)
+        {
+            if (!collision.gameObject.CompareTag("Bullet")) return;
+            if (_hitCooldownTimer > 0) return;
+
+            var bullet = collision.gameObject.GetComponent<BulletLaunch>();
+            Health -= bullet.Damage;
+
+            _hitCooldownTimer = HitCooldown;
+        }
+    */
+
+    public void TakeDamage(int damage)
     {
-        if (!collision.gameObject.CompareTag("Bullet")) return;
-        if (_hitCooldownTimer > 0) return;
-
-        var bullet = collision.gameObject.GetComponent<BulletLaunch>();
-        Health -= bullet.Damage;
-
+        Health -= damage;
         _hitCooldownTimer = HitCooldown;
+    }
+
+    public void Destruct()
+    {
     }
 }

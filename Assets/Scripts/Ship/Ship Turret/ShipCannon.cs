@@ -13,10 +13,12 @@ public class ShipCannon : MonoBehaviour
     private float _shootTimer;
     private Transform _shootPoint;
     private Rigidbody2D _shipRb;
+    private CameraController _cameraController;
 
     private void Awake()
     {
         _shootPoint = transform.Find("ShootPoint");
+        _cameraController = Camera.main.GetComponent<CameraController>();
     }
 
     private void Start()
@@ -32,6 +34,7 @@ public class ShipCannon : MonoBehaviour
         {
             Shoot();
             _shootTimer = 0f;
+            _cameraController.Shake(0.1f, 0.9f);
         }
     }
 
