@@ -579,6 +579,7 @@ GameObject:
   - component: {fileID: 6046813369100430565}
   - component: {fileID: 4308468300340688007}
   - component: {fileID: 4323557272344687169}
+  - component: {fileID: 4106403425025524614}
   m_Layer: 0
   m_Name: Player Ship
   m_TagString: Player
@@ -634,7 +635,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.124305725, y: 0.1810106}
+  m_Offset: {x: -0.119570255, y: 0.19521785}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -645,7 +646,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 7.365177, y: 2.4046543}
+  m_Size: {x: 7.0526114, y: 1.7700534}
   m_EdgeRadius: 0
 --- !u!50 &6046813369100430565
 Rigidbody2D:
@@ -709,6 +710,22 @@ MonoBehaviour:
   _shipHull: {fileID: 0}
   _shipSmallEngine: {fileID: 559214825826228621}
   _shipBigEngine: {fileID: 7652324456032590143}
+--- !u!114 &4106403425025524614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2971317681012061124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 306d72e89141c674dbaf8b6b198683fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blowUpEffect: {fileID: 2313445125499747878, guid: 21232867563bedb409eb5740a54a529e, type: 3}
+  boxCollider: {fileID: 5783877175714503275}
+  MaxHealth: 12
+  HitCooldown: 1.5
 --- !u!1 &3002301671528349005
 GameObject:
   m_ObjectHideFlags: 0
