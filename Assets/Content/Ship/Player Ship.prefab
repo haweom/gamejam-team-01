@@ -310,7 +310,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 3688137133216289480, guid: 7c4d7f314c5b03a4bbda5198e38bdb79, type: 3}
   particlesPrefab: {fileID: 4906814477989814518, guid: c832209ed47b1094fbd6303166f6a0c5, type: 3}
-  shootForce: 12
+  shootForce: 20
   shootInterval: 0.4
   spreadAmount: 10
 --- !u!1 &1515187212401440423
