@@ -12,10 +12,10 @@ public class CannonTracking : MonoBehaviour
 
     private void Update()
     {
-        RotateTowardsCursor();
+        RotateTowardsPlayer();
     }
 
-    private void RotateTowardsCursor()
+    private void RotateTowardsPlayer()
     {
         Vector3 direction = _playerTrans.position - transform.position;
         
