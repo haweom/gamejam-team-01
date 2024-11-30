@@ -35,7 +35,7 @@ public class ShipMovement : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.W))
         {
-            rb.AddForce(transform.up * liftForce, ForceMode2D.Force);
+            rb.AddForce(Vector2.up * liftForce, ForceMode2D.Force);
         }
         else if (Input.GetKey(KeyCode.S))
         {
