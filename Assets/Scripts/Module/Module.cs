@@ -4,6 +4,10 @@ using UnityEngine;
 public class Module : MonoBehaviour, IDamagable
 {
     [SerializeField] private ShipCannon shipCannon;
+    [SerializeField] private SpriteRenderer cannonSprite;
+    [SerializeField] private SpriteRenderer mountSprite;
+    [SerializeField] private GameObject searchlight;
+    [SerializeField] private GameObject blowUpEffect;
 
     public int MaxHealth;
     public int Health { get; private set; }
@@ -24,6 +28,10 @@ public class Module : MonoBehaviour, IDamagable
     private void damageEffect()
     {
         shipCannon.SetShootFalse();
+        cannonSprite.enabled = false;
+        mountSprite.enabled = false;
+        searchlight.SetActive(false);
+        Instantiate(blowUpEffect, transform.position, Quaternion.identity);
     }
 
     public void TakeDamage(int damage)
