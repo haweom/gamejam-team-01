@@ -4,12 +4,12 @@ public class Module : MonoBehaviour
 {
     public bool Usable { get; private set; } = true;
 
-    public int Health = 4;
-    private int _health;
+    public int MaxHealth;
+    public int Health { get; private set; }
 
     void Start()
     {
-        _health = Health;
+        Health = MaxHealth;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -17,6 +17,6 @@ public class Module : MonoBehaviour
         if (!collision.gameObject.CompareTag("Bullet")) return;
 
         var bullet = collision.gameObject.GetComponent<BulletLaunch>();
-        _health -= bullet.Damage;
+        Health -= bullet.Damage;
     }
 }
