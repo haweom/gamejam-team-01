@@ -315,6 +315,10 @@ MonoBehaviour:
   _turret1: {fileID: 0}
   _turret2: {fileID: 0}
   _turret3: {fileID: 0}
+  _tower1: {fileID: 2804249750510676650}
+  _tower1Light: {fileID: 2175807315294132952}
+  _tower2: {fileID: 6839355955518476036}
+  _tower2Light: {fileID: 6765510663336439538}
   _MaxHealth: 10
 --- !u!1 &6673657422164470286
 GameObject:
