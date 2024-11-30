@@ -402,7 +402,7 @@ MonoBehaviour:
   liftForce: 30
   maxSpeed: 10
   antiGravityForce: 1
-  sideMovementForce: 5
+  sideMovementForce: 10
   maxRotationAngle: 5
   rotateForce: 10
   stabilizationForce: 5
