@@ -241,9 +241,9 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_LinearDrag: 1
+  m_AngularDrag: 2
+  m_GravityScale: 2
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -267,10 +267,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 121c05b3cad489b4b91446ea2e6587e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  liftForce: 15
-  maxSpeed: 5
+  liftForce: 30
+  maxSpeed: 10
   antiGravityForce: 0.7
-  maxRotationAngle: 25
+  sideMovementForce: 5
+  maxRotationAngle: 15
   rotateForce: 5
   stabilizationForce: 5
 --- !u!1 &3002301671528349005
