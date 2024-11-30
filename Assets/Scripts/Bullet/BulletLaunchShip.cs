@@ -30,7 +30,6 @@ public class BulletLaunchShip : MonoBehaviour
 
     private void ApplyAreaDamage()
     {
-        //List<IDamagable> damagables = new List<IDamagable>();
         Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, AreaDamageRadius);
 
         foreach (Collider2D hit in hits)
