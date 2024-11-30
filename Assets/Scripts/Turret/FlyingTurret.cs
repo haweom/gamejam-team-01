@@ -4,12 +4,13 @@ using UnityEngine.Rendering.Universal;
 
 public class FlyingTurret : MonoBehaviour, ITurret, IDamagable
 {
-    [Header("Turrets")] 
+    [Header("Turrets")]
     [SerializeField] private Light2D _lightFiled;
 
     [Header("Turret settings")]
     [SerializeField] private int _MaxHealth = 10;
-    
+    [SerializeField] private GameObject _Gores;
+
     private Rigidbody2D _rb;
     private GameObject _mount;
     private MountTrack _mountTrack;
@@ -18,7 +19,7 @@ public class FlyingTurret : MonoBehaviour, ITurret, IDamagable
     private CannonShoot _cannonShoot;
     private Transform _cannonTrans;
     private int _currentHealth;
-    
+
     private void Awake()
     {
         _currentHealth = _MaxHealth;
@@ -63,7 +64,7 @@ public class FlyingTurret : MonoBehaviour, ITurret, IDamagable
 
     public void PowerFieldOff()
     {
-        
+
     }
 
     public void Destruct()
@@ -71,5 +72,10 @@ public class FlyingTurret : MonoBehaviour, ITurret, IDamagable
         _mountTrack.destoryed = true;
         _cannonShoot.isDestroyed = true;
         _cannonShoot.canShoot = false;
+
+        // FX
+        Instantiate(_Gores, transform.position, transform.rotation);
+
+        Destroy(gameObject);
     }
 }

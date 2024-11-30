@@ -124,6 +124,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _lightFiled: {fileID: 0}
   _MaxHealth: 10
+  _Gores: {fileID: 5319505358925221208, guid: 18dc768968c89a649815e88bbef29db1, type: 3}
 --- !u!1 &3275039968204261785
 GameObject:
   m_ObjectHideFlags: 0
@@ -469,7 +470,6 @@ MonoBehaviour:
   shootForce: 10
   shootInterval: 0.2
   bulletCount: 4
-  isTurret: 1
   isDestroyed: 0
   canShoot: 0
 --- !u!1 &8024284396561484306
@@ -637,4 +637,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03bb3c5d7ffb4bc4fa6245094a93272b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destoryed: 0
   mode: 0

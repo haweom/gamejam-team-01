@@ -4835,7 +4835,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2e21cd6d4f0b70e4b92a1968d03a0319, type: 2}
+  - {fileID: 2100000, guid: 7c458ee52ce84504bbae2d597d4b1213, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4900,7 +4900,7 @@ GameObject:
   - component: {fileID: 3379359088652091686}
   - component: {fileID: 6750719898297001495}
   m_Layer: 0
-  m_Name: TurretGore
+  m_Name: FlyingTurretGore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5176,7 +5176,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 4
+      scalar: 5
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -9724,7 +9724,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9bc7a0235288f8b428dce7d6cc803137, type: 2}
+  - {fileID: 2100000, guid: 1702e4adbd69996408d82b68d288def9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
