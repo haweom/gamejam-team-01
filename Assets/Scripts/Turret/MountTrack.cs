@@ -1,3 +1,4 @@
+using Interface;
 using UnityEngine;
 
 public class CannonTracking : MonoBehaviour
@@ -23,5 +24,6 @@ public class CannonTracking : MonoBehaviour
         
         transform.rotation = Quaternion.Euler(0f, 0f, angle);
     }
+    
 }
    

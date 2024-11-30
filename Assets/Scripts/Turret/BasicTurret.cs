@@ -1,12 +1,19 @@
+using Interface;
 using UnityEngine;
 
-public class BasicTurret : MonoBehaviour
+public class BasicTurret : MonoBehaviour, ITurret, IDamagable
 {
+    [Header("Turret Generator settings")]
+    [SerializeField] private int _MaxHealth = 10;
+    
     private Rigidbody2D _rb;
     private GameObject _mount;
     private Transform _mountTrans;
     private GameObject _cannon;
+    private CannonShoot _cannonShoot;
     private Transform _cannonTrans;
+    private int _currentHealth;
+    
     private void Awake()
     {
         _rb = gameObject.GetComponent<Rigidbody2D>();
@@ -23,6 +30,8 @@ public class BasicTurret : MonoBehaviour
                 _cannon = _cannonTrans.gameObject;
             }
         }
+
+        _cannonShoot = _cannon.GetComponent<CannonShoot>();
     }
 
     private void Start()
@@ -31,5 +40,28 @@ public class BasicTurret : MonoBehaviour
         {
             Debug.LogError("B");
         }
+    }
+
+    public void PowerFieldOff()
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public void TakeDamage(int damage)
+    {
+        if (_currentHealth <= 0)
+        {
+            Destruct();
+        }
+        else
+        {
+            _currentHealth -= damage;
+        }
+    }
+
+    public void Destruct()
+    {
+        _cannonShoot.isDestroyed = true;
+        _cannonShoot.canShoot = false;
     }
 }
