@@ -397,10 +397,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2731057385051477869, guid: 125a8356d5007454390d91c508203d10, type: 3}
-      propertyPath: HitCooldown
-      value: 1.5
-      objectReference: {fileID: 0}
     - target: {fileID: 2971317681012061124, guid: 125a8356d5007454390d91c508203d10, type: 3}
       propertyPath: m_Name
       value: Player Ship

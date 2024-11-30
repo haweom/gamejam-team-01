@@ -1,12 +1,11 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
 public class ShipCannon : MonoBehaviour
 {
     [SerializeField] private GameObject bulletPrefab;
+    [SerializeField] private GameObject particlesPrefab;
+
     [SerializeField] private float shootForce = 10f;
     [SerializeField] private float shootInterval = 0.2f;
     [SerializeField] private float spreadAmount = 10f;
@@ -54,5 +53,8 @@ public class ShipCannon : MonoBehaviour
 
             rb.velocity = bulletVelocity;
         }
+
+        // FX
+        Instantiate(particlesPrefab, _shootPoint.position, spreadRotation * _shootPoint.rotation);
     }
 }
