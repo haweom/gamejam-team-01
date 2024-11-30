@@ -33,9 +33,9 @@ public class TurretGenerator : MonoBehaviour, IDamagable
 
     private void Awake()
     {
-        _iturret1 = _turret1.GetComponent<ITurret>();
-        _iturret2 = _turret2.GetComponent<ITurret>();
-        _iturret3 = _turret3.GetComponent<ITurret>();
+        if(_turret1 != null) _iturret1 = _turret1.GetComponent<ITurret>();
+        if(_turret2 != null) _iturret2 = _turret2.GetComponent<ITurret>();
+        if(_turret3 != null) _iturret3 = _turret3.GetComponent<ITurret>();
         _animatorTower1 = _tower1.GetComponent<Animator>();
         _animatorTower2 = _tower2.GetComponent<Animator>();
         _currentHealth = 10;
@@ -62,8 +62,8 @@ public class TurretGenerator : MonoBehaviour, IDamagable
         _tower1Light.intensity = 0;
         _tower2Light.intensity = 0;
         
-        // if(_turret1 != null) _iturret1.PowerFieldOff();
-        // if(_turret2 != null) _iturret2.PowerFieldOff();
-        // if(_turret3 != null) _iturret3.PowerFieldOff();
+        if(_turret1 != null) _iturret1.PowerFieldOff();
+        if(_turret2 != null) _iturret2.PowerFieldOff();
+        if(_turret3 != null) _iturret3.PowerFieldOff();
     }
 }
