@@ -13,9 +13,17 @@ public class BulletLaunch : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Enemy")
+       
+        if (other.tag == "Turret")
         {
             other.GetComponent<IDamagable>().TakeDamage(Damage);
+            Destroy(gameObject);
         }
+        
+        if (other.tag == "Ground")
+        {
+            Destroy(gameObject);
+        }
+        
     }
 }

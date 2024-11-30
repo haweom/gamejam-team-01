@@ -13,9 +13,13 @@ public class BasicTurret : MonoBehaviour, ITurret, IDamagable
     private CannonShoot _cannonShoot;
     private Transform _cannonTrans;
     private int _currentHealth;
+
+    private bool _powerField;
     
     private void Awake()
     {
+        _currentHealth = _MaxHealth;
+        _powerField = true;
         _rb = gameObject.GetComponent<Rigidbody2D>();
 
         _mountTrans = transform.Find("Mount");
@@ -44,7 +48,7 @@ public class BasicTurret : MonoBehaviour, ITurret, IDamagable
 
     public void PowerFieldOff()
     {
-        throw new System.NotImplementedException();
+        _powerField = false;
     }
 
     public void TakeDamage(int damage)
@@ -53,7 +57,7 @@ public class BasicTurret : MonoBehaviour, ITurret, IDamagable
         {
             Destruct();
         }
-        else
+        else if (!_powerField)
         {
             _currentHealth -= damage;
         }
