@@ -30,18 +30,16 @@ public class BulletLaunchShip : MonoBehaviour
 
     private void ApplyAreaDamage()
     {
-        List<IDamagable> damagables = new List<IDamagable>();
-        RaycastHit2D[] hits = Physics2D.CircleCastAll(transform.position, AreaDamageRadius, Vector2.zero, 0, DamageLayerMask);
+        //List<IDamagable> damagables = new List<IDamagable>();
+        Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, AreaDamageRadius);
 
-        foreach (RaycastHit2D hit in hits)
+        foreach (Collider2D hit in hits)
         {
-            IDamagable damagable = hit.collider.GetComponent<IDamagable>();
+            IDamagable damagable = hit.GetComponent<IDamagable>();
             if (damagable != null)
             {
                 damagable.TakeDamage(Damage);
             }
         }
-
-        Debug.DrawLine(transform.position, transform.position + (Vector3)Vector2.up * AreaDamageRadius, Color.red, 1f);
     }
 }
