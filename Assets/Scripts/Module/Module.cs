@@ -8,6 +8,7 @@ public class Module : MonoBehaviour, IDamagable
     [SerializeField] private SpriteRenderer mountSprite;
     [SerializeField] private GameObject searchlight;
     [SerializeField] private GameObject blowUpEffect;
+    [SerializeField] private CircleCollider2D circleCollider2D;
 
     public int MaxHealth;
     public int Health { get; private set; }
@@ -25,13 +26,35 @@ public class Module : MonoBehaviour, IDamagable
         if (_hitCooldownTimer > 0) _hitCooldownTimer -= Time.deltaTime;
     }
 
+    private void Update()
+    {
+        if (cannonSprite.enabled == false && Health > 0)
+        {
+            repairEffect();
+        }
+    }
+    
+    public void repairHealth()
+    {
+        Health = MaxHealth;
+    }
+
     private void damageEffect()
     {
         shipCannon.SetShootFalse();
+        circleCollider2D.enabled = false;
         cannonSprite.enabled = false;
         mountSprite.enabled = false;
         searchlight.SetActive(false);
         Instantiate(blowUpEffect, transform.position, Quaternion.identity);
+    }
+    private void repairEffect()
+    {
+        shipCannon.SetShootTrue();
+        circleCollider2D.enabled = true;
+        cannonSprite.enabled = true;
+        mountSprite.enabled = true;
+        searchlight.SetActive(true);
     }
 
     public void TakeDamage(int damage)
