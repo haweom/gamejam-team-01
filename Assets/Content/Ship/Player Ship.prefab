@@ -145,8 +145,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 127746530675501836, guid: b2fa02e111286244cb12b19a9812f793, type: 3}
-  shootForce: 10
+  shootForce: 12
   shootInterval: 0.4
+  spreadAmount: 10
 --- !u!1 &2971317681012061124
 GameObject:
   m_ObjectHideFlags: 0
@@ -555,3 +556,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 394a13f0dca45964fb5739cc50f09311, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxAngle: 95
+  minAngle: -95
