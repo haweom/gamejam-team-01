@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: RainContact
   m_EditorClassIdentifier: 
   m_AnimatedSprites:
-  - {fileID: -575676193, guid: 7fee738afcb214449a751b468d2401a7, type: 3}
-  - {fileID: -1633633733, guid: 7fee738afcb214449a751b468d2401a7, type: 3}
-  - {fileID: -1879622929, guid: 7fee738afcb214449a751b468d2401a7, type: 3}
-  - {fileID: 1171610102, guid: 7fee738afcb214449a751b468d2401a7, type: 3}
-  - {fileID: -1046361623, guid: 7fee738afcb214449a751b468d2401a7, type: 3}
-  - {fileID: 1575081563, guid: 7fee738afcb214449a751b468d2401a7, type: 3}
-  - {fileID: -1449937561, guid: 7fee738afcb214449a751b468d2401a7, type: 3}
+  - {fileID: -236221159, guid: cd8abc42dcbc18c47989e5c279e0342d, type: 3}
+  - {fileID: 1700392196, guid: cd8abc42dcbc18c47989e5c279e0342d, type: 3}
+  - {fileID: 2106628788, guid: cd8abc42dcbc18c47989e5c279e0342d, type: 3}
+  - {fileID: -2060720568, guid: cd8abc42dcbc18c47989e5c279e0342d, type: 3}
+  - {fileID: 1567252676, guid: cd8abc42dcbc18c47989e5c279e0342d, type: 3}
+  - {fileID: 456235798, guid: cd8abc42dcbc18c47989e5c279e0342d, type: 3}
+  - {fileID: 2100651089, guid: cd8abc42dcbc18c47989e5c279e0342d, type: 3}
   m_MinSpeed: 15
   m_MaxSpeed: 35
   m_AnimationStartTime: 0
