@@ -151,3 +151,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CameraLerp: 0.015
+  Offset: {x: 7, y: 0}

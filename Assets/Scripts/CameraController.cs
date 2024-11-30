@@ -10,6 +10,7 @@ public class CameraController : MonoBehaviour
     }
 
     public float CameraLerp = 0.02f;
+    public Vector2 Offset;
 
     private Transform player;
 
@@ -26,9 +27,10 @@ public class CameraController : MonoBehaviour
 
     private void Update()
     {
+        var lerpPos = (Vector2)player.position + Offset;
         transform.position = new Vector3(
-            Mathf.Lerp(transform.position.x, player.position.x, CameraLerp),
-            Mathf.Lerp(transform.position.y, player.position.y, CameraLerp),
+            Mathf.Lerp(transform.position.x, lerpPos.x, CameraLerp),
+            Mathf.Lerp(transform.position.y, lerpPos.y, CameraLerp),
             transform.position.z
         );
 
