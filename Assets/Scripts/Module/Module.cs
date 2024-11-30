@@ -33,6 +33,11 @@ public class Module : MonoBehaviour, IDamagable
             repairEffect();
         }
     }
+    
+    public void repairHealth()
+    {
+        Health = MaxHealth;
+    }
 
     private void damageEffect()
     {

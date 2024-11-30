@@ -1,19 +1,26 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class ShipRepair : MonoBehaviour
 {
-    [SerializeField] private GameObject _shipTurret;
+    [SerializeField] private Module _shipTurret;
     [SerializeField] private GameObject _shipHull;
-    [SerializeField] private GameObject _shipSmallEngine;
-    [SerializeField] private GameObject _shipBigEngine;
-    
+    [SerializeField] private engineModule _shipSmallEngine;
+    [SerializeField] private engineModule _shipBigEngine;
+
+    private void Start()
+    {
+    }
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            //TODO:add Repair (OLAFFFFFFFFFFFFFFFF KURWAAAAAAAAAAAAAAAAAAAA)
+            _shipTurret.repairHealth();
+            _shipSmallEngine.repairHealth();
+            _shipBigEngine.repairHealth();
         }
     }
 
