@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Turret
   layers:
   - Default
   - TransparentFX
@@ -11,8 +12,8 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - Ship
+  - Turret
   - 
   - 
   - 
@@ -38,6 +39,33 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 4269856231
+    locked: 0
+  - name: Background Objects
+    uniqueID: 50613751
+    locked: 0
+  - name: Ground
+    uniqueID: 123964275
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Ship
+    uniqueID: 2444637239
+    locked: 0
+  - name: Turret
+    uniqueID: 661624973
+    locked: 0
+  - name: Mount
+    uniqueID: 2006602909
+    locked: 0
+  - name: Cannon
+    uniqueID: 1769489653
+    locked: 0
+  - name: Foreground Objects
+    uniqueID: 1880442595
+    locked: 0
+  - name: Foreground
+    uniqueID: 2644851829
     locked: 0
