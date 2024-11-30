@@ -10,20 +10,28 @@ public class UIModule : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     public GameObject HoverText;
     private TextMeshPro _text;
 
+    private bool _mouseOver = false;
+
     void Awake()
     {
         _text = HoverText.GetComponent<TextMeshPro>();
         _module = HoverText.GetComponent<Module>();
     }
 
-    public void OnPointerEnter(PointerEventData eventData)
+    void Update()
     {
-        Debug.Log("feafaef");
-        _text.text = $"{100 * (float)_module.Health / _module.MaxHealth}%";
+        if (_mouseOver) _text.text = $"{100 * (float)_module.Health / _module.MaxHealth}%";
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
+        _mouseOver = false;
         _text.text = string.Empty;
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        Debug.Log("ehah");
+        _mouseOver = true;
     }
 }
