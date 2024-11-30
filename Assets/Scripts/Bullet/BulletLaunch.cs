@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class BulletLaunch : MonoBehaviour
 {
-    public int Damage = 10;
+    public int Damage = 1;
 
     private void Start()
     {

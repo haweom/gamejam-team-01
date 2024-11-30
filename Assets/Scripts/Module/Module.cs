@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Module : MonoBehaviour
 {
-    public bool Usable;
+    public bool Usable { get; private set; } = true;
 
     public int Health = 4;
     private int _health;
@@ -10,11 +10,6 @@ public class Module : MonoBehaviour
     void Start()
     {
         _health = Health;
-    }
-
-    private void Update()
-    {
-
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
