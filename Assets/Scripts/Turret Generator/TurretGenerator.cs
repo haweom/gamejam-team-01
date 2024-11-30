@@ -38,7 +38,7 @@ public class TurretGenerator : MonoBehaviour, IDamagable
         if(_turret3 != null) _iturret3 = _turret3.GetComponent<ITurret>();
         _animatorTower1 = _tower1.GetComponent<Animator>();
         _animatorTower2 = _tower2.GetComponent<Animator>();
-        _currentHealth = 10;
+        _currentHealth = _MaxHealth;
     }
 
     public void TakeDamage(int damage)
