@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Module : MonoBehaviour, IDamagable
 {
-    public bool Destroyed => Health > 0;
+    [SerializeField] private ShipCannon shipCannon;
 
     public int MaxHealth;
     public int Health { get; private set; }
@@ -21,22 +21,23 @@ public class Module : MonoBehaviour, IDamagable
         if (_hitCooldownTimer > 0) _hitCooldownTimer -= Time.deltaTime;
     }
 
-    /*    private void OnTriggerEnter2D(Collider2D collision)
-        {
-            if (!collision.gameObject.CompareTag("Bullet")) return;
-            if (_hitCooldownTimer > 0) return;
-
-            var bullet = collision.gameObject.GetComponent<BulletLaunch>();
-            Health -= bullet.Damage;
-
-            _hitCooldownTimer = HitCooldown;
-        }
-    */
+    private void damageEffect()
+    {
+        shipCannon.SetShootFalse();
+    }
 
     public void TakeDamage(int damage)
     {
-        Health -= damage;
+        if (Health != 0)
+        {
+            Health -= damage;
+        }
         _hitCooldownTimer = HitCooldown;
+
+        if (Health <= 0)
+        {
+            damageEffect();
+        }
     }
 
     public void Destruct()
