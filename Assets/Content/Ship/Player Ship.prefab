@@ -791,6 +791,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5e1b39a95aaa0b4b91355941127fa55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shipCannon: {fileID: 800685353789519463}
   MaxHealth: 4
   HitCooldown: 0.5
 --- !u!58 &2860607270308430173
