@@ -706,7 +706,7 @@ GameObject:
   - component: {fileID: 2860607270308430173}
   m_Layer: 7
   m_Name: Ship Turret
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
