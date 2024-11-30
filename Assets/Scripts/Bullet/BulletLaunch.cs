@@ -2,8 +2,10 @@ using UnityEngine;
 
 public class BulletLaunch : MonoBehaviour
 {
-   private void Start()
-   {
-      Destroy(gameObject, 5);
-   }
+    public int Damage = 1;
+
+    private void Start()
+    {
+        Destroy(gameObject, 5);
+    }
 }
