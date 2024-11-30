@@ -64,10 +64,10 @@ public class ShipMovement : MonoBehaviour
         if (currentAngle > maxRotationAngle)
         {
             float overAngle = currentAngle - maxRotationAngle;
-
             rb.AddTorque(-overAngle * 0.5f, ForceMode2D.Force);
+            rb.AddTorque(overAngle * 0.4f, ForceMode2D.Force);
         }
-         else if (currentAngle < -maxRotationAngle)
+        else if (currentAngle < -maxRotationAngle)
         {
             float overAngle = currentAngle + maxRotationAngle;
             rb.AddTorque(-overAngle * 0.5f, ForceMode2D.Force);
