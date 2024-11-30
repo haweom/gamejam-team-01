@@ -52,7 +52,7 @@ MonoBehaviour:
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
-  m_ApplyToSortingLayers: e7d580fef74d0403738b6307000000003734b6918d986f279d549a77f5447869e3461570753ca59d
+  m_ApplyToSortingLayers: e7d580fef74d0403738b6307000000003734b6918d986f279d549a77f5447869
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -68,7 +68,7 @@ MonoBehaviour:
   m_LocalBounds:
     m_Center: {x: 0, y: -0.00000011920929, z: 0}
     m_Extent: {x: 0.9985302, y: 0.99853027, z: 0}
-  m_PointLightInnerAngle: 39.31
+  m_PointLightInnerAngle: 20.45
   m_PointLightOuterAngle: 108.65
   m_PointLightInnerRadius: 0
   m_PointLightOuterRadius: 19.244493
@@ -354,7 +354,7 @@ MonoBehaviour:
   maxSpeed: 10
   antiGravityForce: 1
   sideMovementForce: 5
-  maxRotationAngle: 10
+  maxRotationAngle: 5
   rotateForce: 10
   stabilizationForce: 5
 --- !u!1 &3002301671528349005
@@ -721,5 +721,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 394a13f0dca45964fb5739cc50f09311, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxAngle: 95
+  rotationSpeed: 100
   minAngle: -95
+  maxAngle: 95
