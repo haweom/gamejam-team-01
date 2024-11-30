@@ -3,8 +3,8 @@ using UnityEngine;
 public class CannonShoot : MonoBehaviour
 {
     [SerializeField] private GameObject bulletPrefab;
-    [SerializeField] private float shootForce = 5f;
-    [SerializeField] private float shootInterval = 0.5f;
+    [SerializeField] private float shootForce = 10f;
+    [SerializeField] private float shootInterval = 0.2f;
     
     private float _shootTimer;
     private Transform _shootPoint;
@@ -12,11 +12,6 @@ public class CannonShoot : MonoBehaviour
     private void Awake()
     {
         _shootPoint = transform.Find("ShootPoint");
-        
-        if (_shootPoint == null)
-        {
-            Debug.LogError("ShootPoint not found");
-        }
     }
     
     private void Update()
