@@ -11,13 +11,13 @@ GameObject:
   - component: {fileID: 2251240493145399395}
   - component: {fileID: 6703861402331477768}
   - component: {fileID: 3035479489699374748}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Flash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2251240493145399395
 Transform:
   m_ObjectHideFlags: 0
@@ -287,8 +287,8 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 10.3
-      minScalar: 5
+      scalar: 80.28
+      minScalar: 5.1
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -340,7 +340,7 @@ ParticleSystem:
     startSizeY:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 1
+      scalar: 4.25
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -751,7 +751,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 0.0003
+      value: 0.05
       mode: 0
       spread: 0
       speed:
@@ -980,7 +980,7 @@ ParticleSystem:
       countCurve:
         serializedVersion: 2
         minMaxState: 0
-        scalar: 2
+        scalar: 1
         minScalar: 30
         maxCurve:
           serializedVersion: 2
@@ -1375,8 +1375,8 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 0.9245408, g: 0.9528302, b: 0.57978815, a: 1}
-        key1: {r: 0.5566038, g: 0.2284176, b: 0.2284176, a: 1}
+        key0: {r: 0.990304, g: 1, b: 0.8254717, a: 1}
+        key1: {r: 0.38679248, g: 0.27463242, b: 0.19886972, a: 1}
         key2: {r: 0, g: 0, b: 0, a: 0}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
@@ -4908,7 +4908,7 @@ GameObject:
   - component: {fileID: 183070979718229262}
   - component: {fileID: 1749848295728925040}
   - component: {fileID: 3230692848734290766}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Flashglow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5013,7 +5013,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.29
+      scalar: 0.08
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -5120,7 +5120,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 1, b: 1, a: 1}
+      maxColor: {r: 1, g: 1, b: 1, a: 0.27058825}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -5184,8 +5184,8 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 6.38
-      minScalar: 2.28
+      scalar: 15
+      minScalar: 6.21
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -5648,7 +5648,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 0.0003
+      value: 0.0001
       mode: 0
       spread: 0
       speed:
@@ -5877,7 +5877,7 @@ ParticleSystem:
       countCurve:
         serializedVersion: 2
         minMaxState: 0
-        scalar: 2
+        scalar: 4
         minScalar: 30
         maxCurve:
           serializedVersion: 2
@@ -5959,13 +5959,13 @@ ParticleSystem:
           inWeight: 0.33333334
           outWeight: 0.33333334
         - serializedVersion: 3
-          time: 0.4020691
+          time: 1
           value: 0
-          inSlope: -2.8043406
-          outSlope: -2.8043406
+          inSlope: 0.09362925
+          outSlope: 0.09362925
           tangentMode: 0
           weightedMode: 0
-          inWeight: 0.2805525
+          inWeight: 0.14535038
           outWeight: 0.33333334
         m_PreInfinity: 2
         m_PostInfinity: 2
@@ -9766,7 +9766,7 @@ ParticleSystemRenderer:
   m_MeshDistribution: 0
   m_SortMode: 0
   m_MinParticleSize: 0
-  m_MaxParticleSize: 0.5
+  m_MaxParticleSize: 999
   m_CameraVelocityScale: 0
   m_VelocityScale: 0
   m_LengthScale: 2
@@ -9803,7 +9803,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7794314597859072722}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: MuzzleFlash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9839,13 +9839,13 @@ GameObject:
   - component: {fileID: 1821295202866791922}
   - component: {fileID: 3933193958809021781}
   - component: {fileID: 2791952808827339641}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1821295202866791922
 Transform:
   m_ObjectHideFlags: 0
@@ -9860,7 +9860,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7794314597859072722}
-  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!198 &3933193958809021781
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -9944,7 +9944,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0.8
+      scalar: 0.4
       minScalar: 0.2
       maxCurve:
         serializedVersion: 2
@@ -9997,8 +9997,8 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 35
-      minScalar: 15
+      scalar: 92.3
+      minScalar: 33.6
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -10051,7 +10051,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 2
       minColor: {r: 0.4339623, g: 0.4339623, b: 0.4339623, a: 1}
-      maxColor: {r: 0.9339623, g: 0.87324053, b: 0.5594963, a: 1}
+      maxColor: {r: 1, g: 0.7971698, b: 0.7971698, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -10115,8 +10115,8 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0.36
-      minScalar: 0.12
+      scalar: 3.37
+      minScalar: 2.94
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -11189,14 +11189,14 @@ ParticleSystem:
     enabled: 1
     gradient:
       serializedVersion: 2
-      minMaxState: 1
+      minMaxState: 3
       minColor: {r: 1, g: 1, b: 1, a: 1}
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 1, g: 0.9235032, b: 0.6745283, a: 1}
-        key1: {r: 0.6981132, g: 0.38780236, b: 0.13501245, a: 1}
-        key2: {r: 1, g: 1, b: 1, a: 0}
+        key0: {r: 0.7768477, g: 1, b: 0, a: 1}
+        key1: {r: 0.1981132, g: 0.11543474, b: 0.10746707, a: 1}
+        key2: {r: 0.6981132, g: 0.38780236, b: 0.13501245, a: 0}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
         key5: {r: 0, g: 0, b: 0, a: 0}
@@ -11225,7 +11225,7 @@ ParticleSystem:
       minGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
-        key1: {r: 1, g: 1, b: 1, a: 1}
+        key1: {r: 0, g: 0, b: 0, a: 1}
         key2: {r: 0, g: 0, b: 0, a: 0}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
@@ -11249,7 +11249,7 @@ ParticleSystem:
         atime6: 0
         atime7: 0
         m_Mode: 0
-        m_ColorSpace: -1
+        m_ColorSpace: 0
         m_NumColorKeys: 2
         m_NumAlphaKeys: 2
   UVModule:
@@ -12520,7 +12520,7 @@ ParticleSystem:
     drag:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 35.8
+      scalar: 119
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -14663,7 +14663,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 10308, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
