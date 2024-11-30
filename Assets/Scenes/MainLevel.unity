@@ -49452,14 +49452,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player Ship
       objectReference: {fileID: 0}
-    - target: {fileID: 8615996531404231873, guid: 125a8356d5007454390d91c508203d10, type: 3}
-      propertyPath: m_ApplyToSortingLayers.Array.size
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 8615996531404231873, guid: 125a8356d5007454390d91c508203d10, type: 3}
-      propertyPath: m_ApplyToSortingLayers.Array.data[8]
-      value: -1650115467
-      objectReference: {fileID: 0}
     - target: {fileID: 8916053137392193574, guid: 125a8356d5007454390d91c508203d10, type: 3}
       propertyPath: m_LocalPosition.x
       value: -12.33
@@ -118801,14 +118793,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 242016561960307973, guid: 58c32e5831ca5f944b2898bed96ed398, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 242016561960307973, guid: 58c32e5831ca5f944b2898bed96ed398, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2751086109284628531, guid: 58c32e5831ca5f944b2898bed96ed398, type: 3}
       propertyPath: m_Name
       value: Main Camera
@@ -118870,30 +118854,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1874113820663093480, guid: 719b01418d5eedf4798b90fd38c81642, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1874113820663093480, guid: 719b01418d5eedf4798b90fd38c81642, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1874113820663093480, guid: 719b01418d5eedf4798b90fd38c81642, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1874113820663093480, guid: 719b01418d5eedf4798b90fd38c81642, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -1.56
-      objectReference: {fileID: 0}
-    - target: {fileID: 1874113820663093480, guid: 719b01418d5eedf4798b90fd38c81642, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.02
-      objectReference: {fileID: 0}
-    - target: {fileID: 1874113820663093480, guid: 719b01418d5eedf4798b90fd38c81642, type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2639957404330967897, guid: 719b01418d5eedf4798b90fd38c81642, type: 3}
       propertyPath: _turret1
       value: 
@@ -118906,10 +118866,6 @@ PrefabInstance:
       propertyPath: _turret3
       value: 
       objectReference: {fileID: 1048240016}
-    - target: {fileID: 2804249750510676650, guid: 719b01418d5eedf4798b90fd38c81642, type: 3}
-      propertyPath: m_Name
-      value: Tower1
-      objectReference: {fileID: 0}
     - target: {fileID: 3275422369462717995, guid: 719b01418d5eedf4798b90fd38c81642, type: 3}
       propertyPath: m_LocalPosition.x
       value: 58
@@ -118950,10 +118906,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6254803792286947681, guid: 719b01418d5eedf4798b90fd38c81642, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 1a6d3ba36777f9c48b76213ba7992bb1, type: 2}
     - target: {fileID: 6495526943138905204, guid: 719b01418d5eedf4798b90fd38c81642, type: 3}
       propertyPath: m_Name
       value: TurretGenerator
