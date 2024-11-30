@@ -1,3 +1,4 @@
+using Interface;
 using UnityEngine;
 
 public class CannonShoot : MonoBehaviour
@@ -8,14 +9,19 @@ public class CannonShoot : MonoBehaviour
     
     private float _shootTimer;
     private Transform _shootPoint;
+    public bool isDestroyed;
+    public bool canShoot;
     
     private void Awake()
     {
         _shootPoint = transform.Find("ShootPoint");
+        isDestroyed = false;
+        canShoot = true;
     }
     
     private void Update()
     {
+        if(!canShoot) return;
         _shootTimer += Time.deltaTime;
         
         if (_shootTimer >= shootInterval)
@@ -35,4 +41,6 @@ public class CannonShoot : MonoBehaviour
             rb.AddForce(_shootPoint.up * shootForce, ForceMode2D.Impulse);
         }
     }
+
+
 }
