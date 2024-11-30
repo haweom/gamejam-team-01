@@ -206,6 +206,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Damage: 1
   AreaDamageRadius: 2
+  particlesPrefab: {fileID: 2313445125499747878, guid: 21232867563bedb409eb5740a54a529e, type: 3}
   DamageLayerMask:
     serializedVersion: 2
     m_Bits: 128
