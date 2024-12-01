@@ -1,13 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
+using Assets.Scripts;
 using Interface;
 using UnityEngine;
 
-public class HullModule : MonoBehaviour, IDamagable
+public class HullModule : MonoBehaviour, IDamagable, IModule
 {
     [SerializeField] private GameObject blowUpEffect;
     [SerializeField] private BoxCollider2D boxCollider;
-    
+
     public int MaxHealth;
     public int Health { get; private set; }
 
@@ -50,5 +49,10 @@ public class HullModule : MonoBehaviour, IDamagable
 
     public void Destruct()
     {
+    }
+
+    public float GetHealthPercent()
+    {
+        return (float)Health / MaxHealth;
     }
 }
