@@ -42,9 +42,21 @@ public class RocketLaunch : MonoBehaviour
 
         for (int i = 0; i < rocketsToLaunch; i++)
         {
-            GameObject rocket = Instantiate(rocketPrefab, transform.position, Quaternion.identity);
-            RocketFly rocketFly = rocket.GetComponent<RocketFly>();
-            StartCoroutine(StartRocket(rocketFly, i, targets));
+            if (targets != null && targets.Count > 0)
+            {
+                IDamagable target = targets[i % targets.Count];
+
+                if (target is MonoBehaviour monoTarget)
+                {
+                    Vector3 targetPosition = monoTarget.transform.position;
+                    Vector2 direction = (targetPosition - transform.position).normalized;
+                    float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90f;
+                    
+                    GameObject rocket = Instantiate(rocketPrefab, transform.position, Quaternion.Euler(0f, 0f, angle));
+                    RocketFly rocketFly = rocket.GetComponent<RocketFly>();
+                    StartCoroutine(StartRocket(rocketFly, i, targets));
+                }
+            }
         }
     }
 
