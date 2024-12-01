@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using Application = UnityEngine.WSA.Application;
 
 public class MenuController : MonoBehaviour
 {
