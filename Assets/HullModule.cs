@@ -1,6 +1,7 @@
 using Assets.Scripts;
 using Interface;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class HullModule : MonoBehaviour, IDamagable, IModule
 {
@@ -52,6 +53,7 @@ public class HullModule : MonoBehaviour, IDamagable, IModule
         {
             Instantiate(blowUpEffect, transform.position, Quaternion.identity);
             Destroy(gameObject);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 
