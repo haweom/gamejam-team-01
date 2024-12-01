@@ -11,11 +11,18 @@ public class Module : MonoBehaviour, IDamagable, IModule
     [SerializeField] private GameObject blowUpEffect;
     [SerializeField] private CircleCollider2D circleCollider2D;
 
+    private RedOverlay _overlay;
+
     public int MaxHealth;
     public int Health { get; private set; }
 
     public float HitCooldown = 1.5f;
     private float _hitCooldownTimer;
+
+    void Awake()
+    {
+        _overlay = GameObject.Find("FlashImage").GetComponent<RedOverlay>();
+    }
 
     void Start()
     {
@@ -60,6 +67,7 @@ public class Module : MonoBehaviour, IDamagable, IModule
 
     public void TakeDamage(int damage)
     {
+        _overlay.Flash();
         if (Health != 0)
         {
             Health -= damage;

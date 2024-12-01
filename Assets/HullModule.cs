@@ -13,6 +13,13 @@ public class HullModule : MonoBehaviour, IDamagable, IModule
     public float HitCooldown = 1.5f;
     private float _hitCooldownTimer;
 
+    private RedOverlay _overlay;
+
+    void Awake()
+    {
+        _overlay = GameObject.Find("FlashImage").GetComponent<RedOverlay>();
+    }
+
     void Start()
     {
         Health = MaxHealth;
@@ -34,6 +41,7 @@ public class HullModule : MonoBehaviour, IDamagable, IModule
 
     public void TakeDamage(int damage)
     {
+        _overlay.Flash();
         if (Health != 0)
         {
             Health -= damage;
