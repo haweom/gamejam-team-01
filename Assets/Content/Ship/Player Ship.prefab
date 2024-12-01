@@ -694,6 +694,10 @@ MonoBehaviour:
   maxRotationAngle: 5
   rotateForce: 10
   stabilizationForce: 5
+  bigEngineFire: {fileID: 883787957782693153}
+  smolEngineFire: {fileID: 8277426207930677462}
+  smolEngine: {fileID: 7144385234839233885}
+  bigEngine: {fileID: 1860474863090907696}
 --- !u!114 &4323557272344687169
 MonoBehaviour:
   m_ObjectHideFlags: 0

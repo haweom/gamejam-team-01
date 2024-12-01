@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 using UnityEngine.Serialization;
 
 public class ShipMovement : MonoBehaviour
@@ -15,6 +16,12 @@ public class ShipMovement : MonoBehaviour
     [SerializeField] private float maxRotationAngle;
     [SerializeField] private float rotateForce;
     [SerializeField] private float stabilizationForce;
+    
+    //ENGINE SPRITES
+    [SerializeField] private SpriteRenderer bigEngineFire;
+    [SerializeField] private SpriteRenderer smolEngineFire;
+    [SerializeField] private Light2D smolEngine;
+    [SerializeField] private Light2D bigEngine;
         
     private Rigidbody2D rb;
     private float _gravityForce;
@@ -43,11 +50,18 @@ public class ShipMovement : MonoBehaviour
         }
         else if (Input.GetKey(KeyCode.Space))
         {
-            
+            bigEngine.enabled = false;
+            smolEngine.enabled = false;
+            bigEngineFire.enabled = false;
+            smolEngineFire.enabled = false;
         }
         else
         {
             rb.AddForce(Vector2.up * (antiGravityForce * _gravityForce), ForceMode2D.Force);
+            bigEngine.enabled = true;
+            smolEngine.enabled = true;
+            bigEngineFire.enabled = true;
+            smolEngineFire.enabled = true;
         }
         
         float horizontalInput = Input.GetAxis("Horizontal");
