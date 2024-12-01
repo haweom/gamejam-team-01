@@ -7,7 +7,8 @@ using UnityEngine;
 public class RocketFly : MonoBehaviour
 {
     [SerializeField] private float rocketSpeed;
-    [SerializeField] private float rocketDamage;
+    [SerializeField] private int rocketDamage;
+    [SerializeField] private GameObject explosion;
     
     private Rigidbody2D rb;
 
@@ -25,10 +26,37 @@ public class RocketFly : MonoBehaviour
             
             rb.gravityScale = 0;
             rb.velocity = direction * rocketSpeed;
-            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90f;
             transform.rotation = Quaternion.Euler(0f, 0f, angle);
         }
     }
     
-    
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Turret"))
+        {
+            Instantiate(explosion, transform.position, Quaternion.identity);
+            ApplyAreaDamage();
+            Destroy(gameObject);
+        }
+        else if (other.CompareTag("Ground") || other.CompareTag("ForceFIeld"))
+        {
+            Instantiate(explosion, transform.position, Quaternion.identity);
+            ApplyAreaDamage();
+            Destroy(gameObject);
+        }
+    }
+    private void ApplyAreaDamage()
+    {
+        Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, 2);
+
+        foreach (Collider2D hit in hits)
+        {
+            IDamagable damagable = hit.GetComponent<IDamagable>();
+            if (damagable != null)
+            {
+                damagable.TakeDamage(rocketDamage);
+            }
+        }
+    }
 }
