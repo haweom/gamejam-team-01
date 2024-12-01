@@ -23,8 +23,7 @@ public class HUDController : MonoBehaviour
         {
             float altitude = Ship.position.y;
             float speed = shipRigidbody != null ? shipRigidbody.velocity.magnitude : 0;
-
-            // Update the HUD text
+            
             AltitudeText.text = $"ALTIDUDE: {altitude:F1} m";
             SpeedText.text = $"SPEED: {speed:F1} m/s";
         }
