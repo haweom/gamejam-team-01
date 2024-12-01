@@ -1,5 +1,6 @@
 using Interface;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EndingEngine : MonoBehaviour, IDamagable
 {
@@ -13,7 +14,13 @@ public class EndingEngine : MonoBehaviour, IDamagable
         // FX
         Instantiate(_Gores, transform.position, transform.rotation);
 
-        Destroy(gameObject);
+        Invoke(nameof(ChangeScene),2f);
+        transform.localScale = new Vector3(0f, 0f, transform.localScale.z);
+    }
+
+    private void ChangeScene()
+    {
+        SceneManager.LoadScene(2);
     }
     
     public void TakeDamage(int damage)
