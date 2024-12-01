@@ -1,14 +1,20 @@
+using System;
 using Interface;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class EndingEngine : MonoBehaviour, IDamagable
 {
-    [SerializeField] private int _MaxHealth = 10;
+    [SerializeField] private int _MaxHealth = 5;
     [SerializeField] private GameObject _Gores;
     
     private int _currentHealth;
-    
+
+    private void Awake()
+    {
+        _currentHealth = _MaxHealth;
+    }
+
     public void Destruct()
     {
         // FX
