@@ -1,7 +1,8 @@
+using Assets.Scripts;
 using Interface;
 using UnityEngine;
 
-public class Module : MonoBehaviour, IDamagable
+public class Module : MonoBehaviour, IDamagable, IModule
 {
     [SerializeField] private ShipCannon shipCannon;
     [SerializeField] private SpriteRenderer cannonSprite;
@@ -33,7 +34,7 @@ public class Module : MonoBehaviour, IDamagable
             repairEffect();
         }
     }
-    
+
     public void repairHealth()
     {
         Health = MaxHealth;
@@ -73,5 +74,10 @@ public class Module : MonoBehaviour, IDamagable
 
     public void Destruct()
     {
+    }
+
+    public float GetHealthPercent()
+    {
+        return (float)Health / MaxHealth;
     }
 }
