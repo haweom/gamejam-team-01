@@ -8,7 +8,7 @@ public class RedOverlay : MonoBehaviour
     public void Flash()
     {
         var color = _image.color;
-        color.a = 1;
+        color.a = 0.1f;
 
         _image.color = color;
     }
