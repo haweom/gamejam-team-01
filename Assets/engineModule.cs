@@ -1,10 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
+using Assets.Scripts;
 using Interface;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 
-public class engineModule : MonoBehaviour, IDamagable
+public class engineModule : MonoBehaviour, IDamagable, IModule
 {
     [SerializeField] private SpriteRenderer engineSprite;
     [SerializeField] private SpriteRenderer fireSprite;
@@ -42,7 +41,7 @@ public class engineModule : MonoBehaviour, IDamagable
     }
 
     //TODO add negative buffs
-    
+
     private void damageEffect()
     {
         engineCollider.enabled = false;
@@ -75,5 +74,10 @@ public class engineModule : MonoBehaviour, IDamagable
 
     public void Destruct()
     {
+    }
+
+    public float GetHealthPercent()
+    {
+        return (float)Health / MaxHealth;
     }
 }
