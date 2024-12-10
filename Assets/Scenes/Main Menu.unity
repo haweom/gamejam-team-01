@@ -2232,6 +2232,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ending Ship
       objectReference: {fileID: 0}
+    - target: {fileID: 1665382931346952702, guid: 0c9a3d72ccd7a0a4e833e5d3c7a1fa65, type: 3}
+      propertyPath: m_BodyType
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7651253799224533612, guid: 0c9a3d72ccd7a0a4e833e5d3c7a1fa65, type: 3}
       propertyPath: m_LocalScale.x
       value: 70
